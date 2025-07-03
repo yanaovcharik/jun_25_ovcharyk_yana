@@ -1,1 +1,101 @@
+@import '/styles/blocks/card';
+@import '/styles/blocks/variables';
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  --column-coun: 2;
+  --inline-padding: 35px;
+
+  padding: 30px var(--inline-padding);
+  display: grid;
+  grid-template-columns: repeat(var(--column-coun), 200px);
+  gap: 30px 40px;
+  justify-content: center;
+
+  perspective: 400px;
+
+  @media (min-width: 750px) {
+  --inline-padding: 160px;
+  }
+
+  @media (min-width: 1000px) {
+  --inline-padding: 55px;
+  --column-coun: 4;
+  }
+
+  @media (min-width: 1500px) {
+  --inline-padding: 305px;
+  --column-coun: 4;
+  }
+}
